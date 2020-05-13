@@ -1,0 +1,48 @@
+{
+    "name": "schema_Human_Development_Index",
+    "title": " The Human Development Index",
+    "description": "The Human Development Index group by categorical country in the world",
+    "fields": [
+        {
+            "name": "HDI_RANK",
+            "title": "HDI rank by Country level",
+            "type": "integer",
+            "description": "Unique HDI rank by Country level.",
+			"constraints": {
+						"required": true
+						   }
+        },
+        {
+            "name": "COUNTRY_NAME",
+            "title": "Country Name",
+            "type": "string",
+            "description": "Standard Country Name."
+        },
+		{
+            "name": "YEARS",
+            "title": "HDI values by years",
+            "type": "year",
+            "description": "Standard Years Values."
+        },
+        {
+            "name": "HDI_VALUES",
+            "title": "HDI values",
+            "type": "number",
+            "description": "Standard HDI Value."
+        },
+        {
+            "name": "HDI_CATEGORY",
+            "title": "Countries group by HDI Values",
+            "type": "string",
+            "description": "Standard HDI category Level.",
+			"constraints": {
+			   "enum": [
+                    "HIGH HUMAN DEVELOPMENT",
+                    "MEDIUM HUMAN DEVELOPMENT",
+                    "LOW HUMAN DEVELOPMENT"
+                        ]
+                           }
+        }
+	            ],
+    "missingValues": [" "]
+}
